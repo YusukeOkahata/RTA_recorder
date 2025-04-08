@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RTA Recorder</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <meta name="description" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="image/timer_icon.svg" type="image/svg+xml" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <!--data-image-src="64虹.png"-->
+    <div
+      class="parallax-window text-center"
+      data-parallax="scroll"
+      style="height: 800px; color: white"
+      data-image-src="image/64虹.png"
+    >
+      <h1 class="display-3">RTA-Recorder</h1>
+      <div class="container">
+        <!-- Content here -->
+        <div class="d-flex justify-content-center">
+          <form class="row g-3 mt-1">
+            <div class="col-auto">
+              <label for="numOfLaps" class="text-white">Number of Laps</label>
+            </div>
+
+            <div class="col-auto">
+              <input type="number" class="form-control" id="numOfLaps" />
+            </div>
+
+            <div class="col-auto">
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="decide"
+                onclick="setNumfLaps(),setLapName()"
+              >
+                Decide
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <form class="row g-3 mt-1">
+            <div class="col-auto">
+              <label for="numOfLaps" class="text-white">Target Time</label>
+            </div>
+
+            <div class="col-auto">
+              <input type="number" class="form-control" id="targetTime" />
+            </div>
+
+            <div class="col-auto">
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="decideTime"
+                onclick="setTargetTime()"
+              >
+                Decide Target Time
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <br />
+
+        <div class="d-flex justify-content-center">
+          <p><span id="span2"></span>Laps</p>
+          <p><span id="span-time" class="ms-3"></span>Seconds (Target Time)</p>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <div id="time" class="display-2">00:00:00.000</div>
+        </div>
+
+        <br />
+
+        <div class="d-flex justify-content-center">
+          <button id="startButton" type="button" class="ms-1 btn btn-light">
+            Start
+          </button>
+          <button id="lapButton" type="button" class="ms-5 btn btn-light">
+            Lap
+          </button>
+          <button id="clearButton" type="button" class="ms-5 btn btn-light">
+            Time Clear
+          </button>
+          <button id="stopButton" type="button" class="ms-5 btn btn-light">
+            Stop
+          </button>
+        </div>
+
+        <br />
+
+        <div class="d-flex justify-content-center">
+          <p><span id="span-name"></span></p>
+        </div>
+
+        <p><span id="span3" class="text-primary"></span></p>
+      </div>
+    </div>
+
+    <script src="app/app.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+  </body>
+
+  <footer>
+    <div class="fixed-bottom">
+      <p><em>©︎2024 I.P.C. Created by Jolly 2024/1/2</em></p>
+    </div>
+  </footer>
+</html>
